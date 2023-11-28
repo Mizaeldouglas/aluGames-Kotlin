@@ -1,15 +1,9 @@
 package games
 
-import com.google.gson.annotations.SerializedName
-
-class Game(
-    @SerializedName("title") val title: String,
-    @SerializedName("thumb") val cover: String,
-    val description: String
-) {
+data class Game(val title: String,val cover: String) {
 
     override fun toString(): String {
-        return "Jogos: \nTitulo: $title\nCapa: $cover\nDescrição: $description\n"
+        return "Jogos: \nTitulo: $title\nCapa: $cover\n"
     }
 
 }
